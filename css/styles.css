@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
+body {
+	background-color: #fff;
+}
+
+#topbar li {
+	margin: 0;
+	list-style-type: none;
+	display: inline;
+	font-family: Dosis, sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+#topbar ul {
+	border-right: 0;
+}
+
+#topbar li a {
+	text-decoration: none;
+	color: black;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+  background-color: #eee;
+	transition:background-color 0.5s;
+	-moz-transition:background-color 0.5s;
+	-webkit-transition:background-color 0.5s;
+	-o-transition:background-color 0.5s;
+}
+
+
+#topbar ul li a:hover {
+	background-color: rgba(140, 45, 25, 0.75);
+}
+
+#topbar li img {
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+#topbar ul {
+	float: left;
+	padding: 0; 
+}
+
+#topbar {
+	top: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 80%;
+}
+
+#logo {
+	float: right;
+	display: block;
+	position: relative;
+	margin-top: 21px;
+}
