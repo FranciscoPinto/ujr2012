@@ -12,17 +12,21 @@ body {
 	z-index: -1;
 }
 
-#topbar li {
+#topbar ul li {
 	margin: 0;
 	list-style-type: none;
 	display: inline;
 	font-family: Dosis, sans-serif;
 	font-size: 20px;
 	letter-spacing: 1px;
+	
+
 }
 
 #topbar ul {
 	border-right: 0;
+	float: left;
+	padding: 0; 
 }
 
 #topbar li a {
@@ -33,11 +37,16 @@ body {
 	padding-right: 10px;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
-  background-color: #eee;
+  background-color: rgba(230,230,230,0.9);
 	transition:background-color 0.5s;
 	-moz-transition:background-color 0.5s;
 	-webkit-transition:background-color 0.5s;
 	-o-transition:background-color 0.5s;
+
+	border-radius: 10px;
+	-moz-boder-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 
 
@@ -50,22 +59,24 @@ body {
 	margin-right: 5px;
 }
 
-#topbar ul {
-	float: left;
-	padding: 0; 
-}
-
 #topbar {
-	top: 0;
 	margin: auto;
-	left: 0;
-	right: 0;
 	width: 75%;
+	display: block;
 }
 
 #logo {
 	float: right;
 	display: block;
-	position: relative;
 	margin-top: 2%;
+}
+
+.bx-window, .bx-wrapper {
+	clear: both;
+}
+
+.content-element {
+	width: 65%;
+	padding: 50px;
+	background: rgba(33,33, 33, 0.7);
 }
