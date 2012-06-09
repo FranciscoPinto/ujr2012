@@ -1,0 +1,8 @@
+CREATE TABLE Student 
+(
+	studentID INTEGER PRIMARY KEY,
+	studentName VARCHAR(200) NOT NULL,
+	week INTEGER NOT NULL,
+	day DATETIME NOT NULL,
+	submited BOOLEAN NOT NULL
+);
