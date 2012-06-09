@@ -7,7 +7,7 @@ body {
 
 #canvas {
 	position: absolute;
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	z-index: -1;
 }
@@ -60,7 +60,7 @@ body {
 	margin: auto;
 	left: 0;
 	right: 0;
-	width: 80%;
+	width: 75%;
 }
 
 #logo {
