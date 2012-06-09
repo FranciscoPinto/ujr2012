@@ -2,6 +2,14 @@
 
 body {
 	background-color: #fff;
+	margin: 0;
+}
+
+#canvas {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
 }
 
 #topbar li {
@@ -59,5 +67,5 @@ body {
 	float: right;
 	display: block;
 	position: relative;
-	margin-top: 21px;
+	margin-top: 2%;
 }

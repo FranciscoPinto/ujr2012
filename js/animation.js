@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 	// Canvas definitions
-	var width = 800;
-	var height = 600;
+	var width = window.innerWidth;
+	var height = window.innerHeight;
 	var canvasSelector = 'div#canvas';
 
 	// Renderer
