@@ -27,6 +27,7 @@ body {
 	border-right: 0;
 	float: left;
 	padding: 0; 
+	display:block;
 }
 
 #topbar li a {
@@ -71,12 +72,9 @@ body {
 	margin-top: 2%;
 }
 
-.bx-window, .bx-wrapper {
-	clear: both;
+#content {
+	width: 70%;
+	margin: 0 auto;
 }
 
-.content-element {
-	width: 65%;
-	padding: 50px;
-	background: rgba(33,33, 33, 0.7);
-}
+

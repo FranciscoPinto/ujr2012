@@ -8,25 +8,21 @@
 		<meta name="author" content="Diogo Teixeira, Francisco Pinto">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/anythingslider.css">
+
 		<script src="js/Three.js"></script>
 		<script src="js/jquery.js"></script>
-		<script src="js/bxslider.js"></script>
 		<script src="js/animation.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('#slider').bxSlider();
-			});
-		</script>
 	</head>
 
 	<body>
 		<div id="topbar">
 			<ul>
-				<li><a id="inicio" href="index.htm"><img src="img/home.png"/>Início</a></li>
-				<li><a id="guioes" href="guioes.htm"><img src="img/book.png"/>Guiões</a></li>
-				<li><a id="trabalhos" href="trabalhos.htm"><img src="img/projects.png">Trabalhos</a></li>
-				<li><a id="download" href="sketchup.htm"><img src="img/download.png">Download do SketchUp</a></li>
-				<li><a id="contactos" href="contactos.htm"><img src="img/contacts.png">Contactos</a></li>
+				<li><a href="#inicio"><img src="img/home.png"/>Início</a></li>
+				<li><a href="#guioes"><img src="img/book.png"/>Guiões</a></li>
+				<li><a href="#trabalhos"><img src="img/projects.png">Trabalhos</a></li>
+				<li><a href="#sketchup"><img src="img/download.png">Download do SketchUp</a></li>
+				<li><a href="#contactos"><img src="img/contacts.png">Contactos</a></li>
 			</ul>
 
 			<a id="logo" href="http://fe.up.pt/" >
@@ -38,12 +34,8 @@
 		<div id="canvas">
 		</div>
 
-		<ul id="slider">
-			<li><p class="content-element">Inicio</p></li>
-			<li><p class="content-element">Guiões</p></li>
-			<li><p class="content-element">Trabalhos</p></li>
-			<li><p class="content-element">Download do SketchUp</p></li>
-			<li><p class="content-element">Contactos</p></li>
-		</ul>
+		<div id="content">
+			<p>This some content</p>
+		</div>
 	</body>
 </html>
