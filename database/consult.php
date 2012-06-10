@@ -1,5 +1,12 @@
 <?php
-	include_once('database.php');
+	function init_database($path) {
+		$db_name = $path . "ujr3d12.db";
+		$db_access_mode = 0666;
+
+		global $db;
+	   	$db	= new SQLiteDatabase($db_name, $db_access_mode, $message);
+		return $db;
+	}
 
 	function get_all_students() {
 		global $db;
@@ -26,7 +33,7 @@
 		global $db;
 
 		$week = sqlite_escape_string($week);
-		$stmt = $db->query("SELECT * FROM Student WHERE week = {$week}");
+		$stmt = $db->query("SELECT * FROM Student WHERE week = {$week} ORDER BY day ASC, studentName ASC");
 		if(!$stmt)
 			return false;
 		else
