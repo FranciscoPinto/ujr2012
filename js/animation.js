@@ -38,7 +38,7 @@ $(document).ready(function() {
 			scene.add(light);
 
 			// Materials
-			var wireMat = new THREE.MeshBasicMaterial({color: 0x555555, wireframe: true, transparent: true});
+			var wireMat = new THREE.MeshBasicMaterial({color: 0x8C2D19, wireframe: true, transparent: true});
 			var shadowMat = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 
 			// Cube
@@ -85,12 +85,12 @@ $(document).ready(function() {
 
 			function animate(t) {
 
-				var posX1 = Math.cos(t/600)*85; var posX2 = Math.cos(Math.PI*(3/2) + t/600)*85; var posX3 = Math.cos(Math.PI*(3/4) + t/600)*85;
-				var posZ1 = Math.sin(t/600)*85; var posZ2 = Math.sin(Math.PI*(3/2) + t/600)*85; var posZ3 = Math.sin(Math.PI*(3/4) + t/600)*85;
-				var rot1 = t/500;
-				var rot2 = t/700;
-				var rot3 = t/900;
-				var torusSep = 350;
+				var posX1 = Math.cos(t/3000)*85; var posX2 = Math.cos(Math.PI*(3/2) + t/3000)*85; var posX3 = Math.cos(Math.PI*(3/4) + t/3000)*85;
+				var posZ1 = Math.sin(t/3000)*85; var posZ2 = Math.sin(Math.PI*(3/2) + t/3000)*85; var posZ3 = Math.sin(Math.PI*(3/4) + t/3000)*85;
+				var rot1 = t/2000;
+				var rot2 = t/2600;
+				var rot3 = t/3600;
+				var torusSep = 1000;
 				var rotTorus = t/(torusSep * 4) + torusSep;
 			
 				// Cube animation
