@@ -7,11 +7,14 @@ body {
 
 #canvas {
 	position: absolute;
-	margin: auto;
+	margin: 0;
 	top: 0;
 	left:0;
+	right: 0;
+	bottom: 0;
 	padding: 0;
 	z-index: -1;
+	overflow: hidden;
 }
 
 #topbar ul li {
@@ -21,8 +24,6 @@ body {
 	font-family: Dosis, sans-serif;
 	font-size: 20px;
 	letter-spacing: 1px;
-	
-
 }
 
 #topbar ul {
@@ -92,8 +93,13 @@ body {
 .slider-element {
 }
 
+#first {
+	width: 15%;
+	position: relative;
+	left: 60%;
+}
+
 .slider-element h1 {
-	font-family: Dosis, sans-serif;
 	padding: 5px;
 	border: 1px solid #aaa;
 	border-left: 0;
@@ -101,19 +107,39 @@ body {
 	background: rgba(220, 220, 220, 0.80);
 }
 
-.slider-element p {
+.slider-element {
 	font-family: Dosis, sans-serif;
+}
+
+.slider-element p {
 	padding: 5px;
 	border: 1px solid #aaa;
 	border-left: 0;
 	border-right: 0;
 	background: rgba(220, 220, 220, 0.80);
 
+}
+
+.regular-slide {
+	width: 50%;
+	margin: 0 auto;
 }
 
 #main {
 	position: relative;
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 }
 
+#download-container {
+}
+
+#light {
+	margin-left: 10%;
+	float: left;
+}
+
+#full {
+	margin-right: 10%;
+	float: right;
+}
