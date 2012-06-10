@@ -15,7 +15,48 @@
 		<script src="js/bxslider.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('#slider').bxSlider();
+				var slider = $('#slider').bxSlider({
+					controls: false,
+					speed: 1000
+				});
+
+				$('#home-link').click(function(){
+					slider.goToSlide(0);
+					return false;
+				});
+
+				$('#guioes-link').click(function(){
+					slider.goToSlide(1);
+					return false;
+				});
+
+				$('#projectos-link').click(function(){
+					slider.goToSlide(2);
+					return false;
+				});
+
+				$('#download-link').click(function(){
+					slider.goToSlide(3);
+					return false;
+				});
+
+				$('#contactos-link').click(function(){
+					slider.goToSlide(4);
+					return false;
+				});
+
+				(function ($) {
+					$.fn.vAlign = function() {
+							return this.each(function(i){
+									var ah = $(this).height();
+									var ph = $(this).parent().height();
+									var mh = (ph - ah) / 2;
+									$(this).css('margin-top', mh);
+							});
+					};
+				})(jQuery);
+				
+				$('#main').vAlign();
 			});
 		</script>
 	</head>
@@ -23,11 +64,11 @@
 	<body>
 		<div id="topbar">
 			<ul>
-				<li><a href="#inicio"><img src="img/home.png"/>Início</a></li>
-				<li><a href="#guioes"><img src="img/book.png"/>Guiões</a></li>
-				<li><a href="#trabalhos"><img src="img/projects.png">Trabalhos</a></li>
-				<li><a href="#sketchup"><img src="img/download.png">Download do SketchUp</a></li>
-				<li><a href="#contactos"><img src="img/contacts.png">Contactos</a></li>
+				<li><a id="home-link" href="#"><img src="img/home.png"/>Início</a></li>
+				<li><a id="guioes-link" href="#"><img src="img/book.png"/>Guiões</a></li>
+				<li><a id="projectos-link" href="#"><img src="img/projects.png">Trabalhos</a></li>
+				<li><a id="download-link" href="#"><img src="img/download.png">Download do SketchUp</a></li>
+				<li><a id="contactos-link" href="#"><img src="img/contacts.png">Contactos</a></li>
 			</ul>
 
 			<a id="logo" href="http://fe.up.pt/" >
@@ -38,6 +79,11 @@
 
 		<div id="main">
 			<div id="slider">
+				<div id="first" class="slider-element">
+					<h1>Modelação 3D de Objectos</h1>
+
+					<p>Aqui podes encontrar informação relacionada com o workshop.</p>
+				</div>
 				<div class="slider-element">This some content</div>
 				<div class="slider-element">This some content</div>
 				<div class="slider-element">This some content</div>

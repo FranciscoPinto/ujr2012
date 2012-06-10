@@ -8,6 +8,8 @@ body {
 #canvas {
 	position: absolute;
 	margin: auto;
+	top: 0;
+	left:0;
 	padding: 0;
 	z-index: -1;
 }
@@ -55,6 +57,9 @@ body {
 	background-color: rgba(140, 45, 25, 0.75);
 }
 
+#topbar ul li a:active {
+}
+
 #topbar li img {
 	vertical-align: top;
 	margin-right: 5px;
@@ -81,16 +86,34 @@ body {
 	margin-top: 2%;
 }
 
-#slider {
+#first.slider-element {
 }
 
 .slider-element {
 }
 
-#main {
-	position: relative;
-	top: 30px;
-	width: 60%;
-	margin: 0 auto;
+.slider-element h1 {
+	font-family: Dosis, sans-serif;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-left: 0;
+	border-right: 0;
+	background: rgba(220, 220, 220, 0.80);
+}
+
+.slider-element p {
+	font-family: Dosis, sans-serif;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-left: 0;
+	border-right: 0;
+	background: rgba(220, 220, 220, 0.80);
 
 }
+
+#main {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
