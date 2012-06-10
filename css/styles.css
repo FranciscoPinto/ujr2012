@@ -66,17 +66,31 @@ body {
 	display: block;
 }
 
+#topbar:after {
+	content:'';
+	display:table;
+}
+
+#topbar:after {
+	clear: both;
+}
+
 #logo {
 	float: right;
 	display: block;
 	margin-top: 2%;
 }
 
-#content {
-	width: 70%;
-	margin: 0 auto;
-	position: relative;
-	top: 100px;
+#slider {
 }
 
+.slider-element {
+}
 
+#main {
+	position: relative;
+	top: 30px;
+	width: 60%;
+	margin: 0 auto;
+
+}

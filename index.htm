@@ -12,6 +12,12 @@
 		<script src="js/Three.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/animation.js"></script>
+		<script src="js/bxslider.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#slider').bxSlider();
+			});
+		</script>
 	</head>
 
 	<body>
@@ -30,9 +36,14 @@
 
 		</div>	
 
-		<div id="content">
-			<p>This some content</p>
-		</div>	
+		<div id="main">
+			<div id="slider">
+				<div class="slider-element">This some content</div>
+				<div class="slider-element">This some content</div>
+				<div class="slider-element">This some content</div>
+				<div class="slider-element">This some content</div>
+			</div>	
+		</div>
 
 		<div id="canvas">
 		</div>
