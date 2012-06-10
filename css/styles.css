@@ -99,7 +99,7 @@ body {
 	left: 60%;
 }
 
-.slider-element h1 {
+.slider-element h1, .slider-element h2, .slider-element p {
 	padding: 5px;
 	border: 1px solid #aaa;
 	border-left: 0;
@@ -109,15 +109,6 @@ body {
 
 .slider-element {
 	font-family: Dosis, sans-serif;
-}
-
-.slider-element p {
-	padding: 5px;
-	border: 1px solid #aaa;
-	border-left: 0;
-	border-right: 0;
-	background: rgba(220, 220, 220, 0.80);
-
 }
 
 .regular-slide {
@@ -131,7 +122,13 @@ body {
 	margin: 0 auto;
 }
 
-#download-container {
+#full, #light {
+	width: 30%;
+	padding:20px;
+
+}
+
+#download-slide {
 }
 
 #light {
@@ -142,4 +139,33 @@ body {
 #full {
 	margin-right: 10%;
 	float: right;
+}
+
+#full img, #light img {
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#full a, #light a {
+	font-weight:bold;
+	text-align: middle;
+	text-decoration: none;
+	color: black;
+	padding: 5px;
+	padding-top: 4px;
+	padding-bottom: 7px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	background: rgba(220, 220, 220, 0.8);
+	margin: 0 auto;
+
+	transition:background-color 0.3s;
+	-moz-transition:background-color 0.3s;
+	-webkit-transition:background-color 0.3s;
+	-o-transition:background-color 0.3s;
+}
+
+#full a:hover, #light a:hover {
+
+	background: rgba(140, 45, 25, 0.75);
 }
