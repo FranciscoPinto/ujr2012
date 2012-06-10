@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 			function animate(t) {
 
-				// Measure FPS
+				/*// Measure FPS
 				if(lastCycle != 0) {
 					fps = 1000.0 / (t - lastCycle);
 					if(fps < 5) {
@@ -98,7 +98,7 @@ $(document).ready(function() {
 						return;
 					}
 				}
-				lastCycle = t;
+				lastCycle = t;*/
 
 				var posX1 = Math.cos(t/3000)*85; var posX2 = Math.cos(Math.PI*(3/2) + t/3000)*85; var posX3 = Math.cos(Math.PI*(3/4) + t/3000)*85;
 				var posZ1 = Math.sin(t/3000)*85; var posZ2 = Math.sin(Math.PI*(3/2) + t/3000)*85; var posZ3 = Math.sin(Math.PI*(3/4) + t/3000)*85;
