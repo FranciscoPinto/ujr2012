@@ -131,6 +131,15 @@ body {
 #download-slide {
 }
 
+#download-container {
+	overflow: hidden;
+	height: 1%;
+	background: rgba(220, 220, 220, 0.5);
+	border: 1px solid #AAA;
+	border-left: 0;
+	border-right: 0;
+}
+
 #light {
 	margin-left: 10%;
 	float: left;
