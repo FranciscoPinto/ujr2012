@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	if (!window.WebGLRenderingContext) {
+	if (! Detector.webgl) {
 		$('body').attr('style', 'background: white url(\'img/fallback.jpg\') center fixed no-repeat;');
 	} else {
 		try {
