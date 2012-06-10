@@ -1,7 +1,7 @@
 var slider;
 
 function goToSlide(n) {
-	window.slider.goToSlide(n);
+	slider.goToSlide(n);
 	return false;
 }
 
@@ -23,6 +23,7 @@ function getHash() {
 })(jQuery);
 
 function processHash() {
+	var currentSlide;
 	switch (getHash()) {
 		case "#inicio":
 			goToSlide(0);
@@ -50,7 +51,7 @@ function processHash() {
 $(document).ready(function(){
 	slider = $('#slider').bxSlider({
 		controls: false,
-		speed: 1000
+		speed: 500
 	});
 
 	$('#inicio-link').click(function(){goToSlide(0);});
