@@ -37,12 +37,8 @@ function processHash() {
 			goToSlide(2);
 		break;
 
-		case "#download":
-			goToSlide(3);
-		break;
-
 		case "#contactos":
-			goToSlide(4);
+			goToSlide(3);
 		break;
 	}
 }
@@ -57,8 +53,7 @@ $(document).ready(function(){
 	$('#inicio-link').click(function(){goToSlide(0);});
 	$('#guioes-link').click(function(){goToSlide(1);});
 	$('#trabalhos-link').click(function(){goToSlide(2);});
-	$('#download-link').click(function(){goToSlide(3);});
-	$('#contactos-link').click(function(){goToSlide(4);});
+	$('#contactos-link').click(function(){goToSlide(3);});
 
 	processHash();
 
@@ -67,5 +62,23 @@ $(document).ready(function(){
 	});
 
 	$('#main').vAlign();
+
+	$(function() {
+		$("#collapser").collapse({
+			show: function() {
+        this.animate({
+            opacity: 'toggle', 
+            height: 'toggle'
+        }, 300);
+			},
+
+			hide: function() {
+        this.animate({
+            opacity: 'toggle', 
+            height: 'toggle'
+        }, 300);
+			}
+		});
+	});
 });
 
