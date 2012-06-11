@@ -26,11 +26,15 @@ body {
 	letter-spacing: 1px;
 }
 
+#topbar {
+	padding: 0;
+	margin: 0 auto;
+}
+
 #topbar ul {
-	border-right: 0;
-	float: left;
-	padding: 0; 
-	display:block;
+	padding: 0px;
+	margin: 2% auto;
+	text-align: center;
 }
 
 #topbar li a {
@@ -81,10 +85,18 @@ body {
 	clear: both;
 }
 
-#logo {
-	float: right;
-	display: block;
-	margin-top: 2%;
+#logos {
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+
+.logo {
+	display:block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	text-align: center;
 }
 
 #first.slider-element {
@@ -97,6 +109,11 @@ body {
 	width: 15%;
 	position: relative;
 	left: 60%;
+}
+
+#first h1 {
+  background-image: url(../img/splash.svg);
+	background-size: 100%;
 }
 
 .slider-element h1, .slider-element h2, .slider-element p {
@@ -112,6 +129,7 @@ body {
 }
 
 .regular-slide {
+	padding: 0;
 	width: 50%;
 	margin: 0 auto;
 }
