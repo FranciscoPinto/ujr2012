@@ -111,9 +111,15 @@ body {
 	left: 60%;
 }
 
-#title {
-  background-image: url(../img/splash.png);
+#splash {
+	height: 150px;
+	background-image: url(../img/splash.png);
 	background-size: 100%;
+	background-color: white;
+	opacity: 0.7;
+	border: 1px solid #aaa;
+	border-left: 0;
+	border-right: 0;
 }
 
 .slider-element h1, .slider-element h2, .slider-element p {
