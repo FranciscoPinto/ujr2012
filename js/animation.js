@@ -1,7 +1,14 @@
 $(document).ready(function() {
 
+	// Fallback image style
+	var style = "background: white url('img/fallback.jpg') no-repeat center center fixed;";
+	style += "-webkit-background-size: cover;";
+	style += "-moz-background-size: cover;";
+	style += "-o-background-size: cover;";
+	style += "background-size: cover;";
+		
 	if (! Detector.webgl) {
-		$('body').attr('style', 'background: white url(\'img/fallback.jpg\') center fixed no-repeat;');
+		$('body').attr('style', style);
 	} else {
 		try {
 			// Canvas definitions
@@ -144,7 +151,7 @@ $(document).ready(function() {
 			// Start animation
 			animate(new Date().getTime());
 		} catch (ex) {
-			$('body').attr('style', 'background: white url(\'img/fallback.jpg\') center fixed no-repeat;');
+			$('body').attr('style', style);
 		}
 	}
 });
