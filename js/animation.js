@@ -90,22 +90,46 @@ $(document).ready(function() {
 			torusOutter.receiveShadow = true;
 			scene.add(torusOutter);
 
-			// FPS values
-			var lastCycle = 0;
+			// FPS values (counters)
 			var fps = 0;
+			var now = 0;
+			var lastUpdate = (new Date)*1 - 1;
+			var fpsTimeout = 0;
+			// Minimizes FPS flutuation (higher => less flutuation)
+			var fpsFilter = 50;
+			// If true page goes into fallback mode
+			var fallback = false;
+			// If FPS go below this value, fallback is triggered
+			var fpsMin = 20.0;
+			// Sets how much time the FPS must be below fpsMin before trigger
+			var fpsMinTimeout = 5000;
+			// Time between every FPS sample
+			var fpsSampleTime = 1000;
 
+			// Fallback callback
+			function checkFallback() {
+				if(fps != 0 && fps < fpsMin) {
+					fpsTimeout += fpsSampleTime;
+					if(fpsTimeout >= fpsMinTimeout)
+						fallback = true;
+				} else
+					fpsTimeout = 0;
+			}
+
+			// Animation callback
 			function animate(t) {
 
-				/*// Measure FPS
-				if(lastCycle != 0) {
-					fps = 1000.0 / (t - lastCycle);
-					if(fps < 5) {
-						$('canvas').remove();
-						$('body').attr('style', 'background: white url(\'img/fallback.jpg\') center fixed no-repeat;');
-						return;
-					}
+				// Fallback 
+				if(fallback) {
+					$('canvas').remove();
+					$('body').attr('style', style);
+					return;
 				}
-				lastCycle = t;*/
+
+				// FPS calculation
+				var thisFrameFPS = 1000 / ((now=new Date) - lastUpdate);
+				fps += (thisFrameFPS - fps) / fpsFilter;
+				lastUpdate = now;
 
 				var posX1 = Math.cos(t/3000)*85; var posX2 = Math.cos(Math.PI*(3/2) + t/3000)*85; var posX3 = Math.cos(Math.PI*(3/4) + t/3000)*85;
 				var posZ1 = Math.sin(t/3000)*85; var posZ2 = Math.sin(Math.PI*(3/2) + t/3000)*85; var posZ3 = Math.sin(Math.PI*(3/4) + t/3000)*85;
@@ -149,6 +173,7 @@ $(document).ready(function() {
 			};
 
 			// Start animation
+			setInterval(checkFallback, fpsSampleTime);
 			animate(new Date().getTime());
 		} catch (ex) {
 			$('body').attr('style', style);
